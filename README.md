@@ -1,3 +1,3 @@
 # ScriptProgamming
-Web Desiging usong HTML , CSS , JS.
+Web Desiging using HTML , CSS , JS.
 https://thejalsapavan.github.io/ScriptProgamming/
