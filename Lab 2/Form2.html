@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form 2</title>
+	<style>
+		form {
+			background-color: black;
+			color: yellow;
+			width:600px;
+			height:450px;
+		}
+		
+		p{
+			background-color: orange;
+			color:yellow;
+			text-align:left;
+			font-size:25px;
+		}
+
+		div {
+			background-color: orange;
+			color:white;
+			text-align:right;
+		}
+		button{
+			padding: 10px 20px;
+			font-size: 16px;
+			border: none;
+			color:white;
+			background-color:green;
+			text-align: center;
+			text-decoration: none;
+			margin:10px;
+		}
+	</style>
+</head>
+<body>
+<center>
+	<form><p>Sign Up</p>
+		
+				<label>First Name</label>
+				<input style="margin-left:25px"type="text" placeholder="Enter First Name">
+				<br><br>
+				<label>Last Name</label>
+				<input  style="margin-left:25px"type="text" placeholder="Enter Last Name">
+				<br><br>
+				<label>Date of Birth</label>
+				<select style="margin-left:30px"name="day">
+					<option value="day" disabled selected>Day</option>
+				</select>
+				<select style="margin-left:10px"name="month">
+					<option value="month" disabled selected>Month</option>
+					
+				</select>
+				<select style="margin-left:10px"name="year">
+					<option value="year" disabled selected>Year</option>
+		
+				</select>
+				<br><br>
+				<label>Gender</label>
+				<input style="margin-left:30px"type="radio" style="vertical-align:top" name="gender"><label>Male </label>
+				<input style="margin-left:30px" type="radio" style="vertical-align:top" name="gender"><label>Female </label>
+				<br><br>
+				<label style="margin-left:-75px">Country</label>
+				<select style="margin-left:35px"name="month">
+					<option value="country" disabled selected>Country</option>
+					
+				</select>
+				<br><br>
+				<label>Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input style="margin-right:-35px"type="text" placeholder="Enter E-mail">
+				<br><br>
+				<label>Phone</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input style="margin-right:-35px"type="text" placeholder="Enter Phone">
+				<br><br>
+				<label>Password</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input style="margin-right:-20px"type="Password">
+				<br><br>
+				<label style="margin-left:-40px">Confirm Password</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="Password"><br><br>
+				<input style="margin-left:125px" type="checkbox"><label>I Agree to the Terms of use</label>
+				<br><br>
+		
+		<div>
+			<button  type="button">Submit</button> <button style="background-color:red" type="button">Cancel</button>
+		</div>
+	</form>
+	</center>
+</body>
+</html>
