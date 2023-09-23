@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consonents and Vowels finder</title>
+</head>
+<body>
+    <script>
+        var a;
+        a=window.prompt("Enter the string : ");
+        var c=0;
+        var vo=0;
+        var d=0;
+        a=a.toLowerCase();
+        for(var i=0;i<a.length;i++){
+            var char=a.charAt(i);
+            if(/[aeiou]/.test(char)){
+                vo++;
+            }
+            else if(/[a-z]/.test(char)){
+                c++;
+            }
+            else if(/[0-9]/.test(char)){
+                d++;
+            }
+        }
+        document.writeln("No of Vowels: "+vo +"<br>No of consonants : "+c+"<br>No of Digits : "+d);
+    </script>
+    
+</body>
+</html>

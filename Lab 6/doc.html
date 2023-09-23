@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Document Object Model</title>
+	</head>
+	<script>
+		function styled(t){
+			var c=document.getElementById("co");
+			if(t=="t1"){
+				c.style.fontFamily="Courier New";
+				c.style.color="RoyalBlue";
+				c.style.fontSize="25px";
+			}
+			else if(t=="t2"){
+				c.style.fontFamily="Helvetica";
+				c.style.color="Red";
+				c.style.fontSize="50px";
+			}
+			else if(t=="t3"){
+				c.style.fontFamily="Georgia";
+				c.style.color="Green";
+				c.style.fontSize="75px";
+			}
+		}
+	</script>
+	<body>
+		<p id ="co">Silence is argument carried out by other means.</p>
+		<button id="b1" type="Button" onclick="styled('t1')">Theme 1</button>
+		<button id="b2" type="Button" onclick="styled('t2')">Theme 2</button>
+		<button id="b3" type="Button" onclick="styled('t3')">Theme 3</button>
+		
+	</body>
+</html>

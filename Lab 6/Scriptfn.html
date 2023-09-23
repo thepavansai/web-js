@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assignment 6</title>
+	</head>
+	<body>
+		<script>
+			function atrisk(){
+				var str;
+				str=document.getElementById("atri").value;
+				var re="";
+				for(var i=0;i<str.length;i++){
+					re=re+str[i];
+					if(parseInt(str[i])%2==0){
+						re+="*";
+					}
+				}
+				document.getElementById("atout").innerHTML=re;
+			}
+			function maxfreq(){
+				var inp=document.getElementById("maxa").value;
+				var ar=inp.split(",");
+				for(var i=0;i<ar.length;i++){
+					ar[i]=parseInt(ar[i].trim());
+				}
+				var ha = [];
+
+				for (var i = 0; i < ar.length; i++) {
+					if (!ha[ar[i]]) {
+						ha[ar[i]] = 0;
+					}
+					ha[ar[i]]++;
+				}
+				 var maxFrequency = 0;
+				var maxElement = null;
+				for (var i = 0; i < ha.length; i++) {
+					if (ha[i] > maxFrequency) {
+						maxFrequency = ha[i];
+						maxElement = i;
+					}
+				}
+				document.getElementById("mout").innerHTML = "Element is : " + maxElement+" Frequency : "+maxFrequency;
+			}
+			function Pro(){
+				var inp=document.getElementById("arr").value;
+				var ar=inp.split(",");
+				for(var i=0;i<ar.length;i++){
+					ar[i]=parseInt(ar[i].trim());
+				}
+				var sum=0;
+				var pr=1;
+				for(var i=0;i<ar.length;i++){
+					sum+=ar[i];
+					pr=pr*ar[i];
+				}
+				document.getElementById("sout").innerHTML = "Sum is : " + sum+"  Product : "+pr;
+			}
+			function indexf(){
+				var inp=document.getElementById("ar").value;
+				var ar=inp.split(",");
+				for(var i=0;i<ar.length;i++){
+					ar[i]=parseInt(ar[i].trim());
+				}
+				var ind=-1;
+				var x=parseInt(document.getElementById("x").value);
+				for(var i=0;i<ar.length;i++){
+					if(x==ar[i]){
+						ind=i+1;
+					}
+				}
+				
+				document.getElementById("aout").innerHTML="Position is : "+ind;
+			}
+		</script>
+		<h3>#1</h3>
+		<input type="text" id="atri">
+		<br><br><button type="Button" onclick="atrisk()">Atrisk Near Even Numbers</button>
+		<p id="atout">OutPut of Atrisk at even number</p>
+		<h3>#2</h3>
+		<input type="text" id="maxa">
+		<br><br><button type="Button" onclick="maxfreq()">Max Frequency</button>
+		<br>
+		<p id="mout">OutPut Max Frequency</p>
+		<h3>#3</h3>
+		<input type="text" id="arr">
+		<br><br><button type="Button" onclick="Pro()">Sum & Product</button>
+		<br>
+		<p id="sout">Sum and Product </p>
+		<h3>#4</h3>
+		<input type="text" id="ar">
+		<br><br>
+		<input type="text" id="x">
+		<br><br><button type="Button" onclick="indexf()">Array & Element to to search </button>
+		<br>
+		<p id="aout">Output of X Position </p>
+	</body>
+</html>
+

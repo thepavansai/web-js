@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        var a;
+        var count;
+        var arm;
+        arm=0;
+        a=parseInt(window.prompt("Enter the value of a : "));
+        var x;
+        x=a;
+        while(a>1){
+            a=a/10;
+            count++;
+        }
+        var z;
+        z=x;
+        var i=1;
+        for(i=1;i<=count;i++){
+            arm=arm+Math.pow(z%10,count);
+            z=Math.floor(z/10);
+
+        }
+        if(arm==x || (x>=0 && x<=9)){
+            document.writeln(x+" is a Armstrong number");
+        }
+        else{
+            document.writeln(x+" is not a Armstrong number");
+        }
+    </script>
+</body>
+</html>

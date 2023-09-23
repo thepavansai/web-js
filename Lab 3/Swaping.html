@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        var a;
+        var b;
+        var temp;
+        a=parseInt(window.prompt("Enter the value of a : "));
+        b=parseInt(window.prompt("Enter the value of b : "));
+        temp=a;
+        a=b;
+        b=temp;
+        document.writeln("After swapping : <br>");
+        document.writeln("a : "+a+"<br>b "+b);
+        document.writeln("<br>After swapping with out using variable: <br>");
+        a=a+b;
+        b=a-b;
+        a=a-b;
+        document.writeln("a : "+a+"<br>b "+b);
+    </script>
+</body>
+</html>

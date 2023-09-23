@@ -1,0 +1,129 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>Java Script Functions </title>
+		
+	</head>
+	<body>
+		<h1>Assignment 4</h1>
+	
+		<script>
+			function reverse(){
+				var re;
+				re=parseInt(document.getElementById("rev").value);
+				var te;
+				te=0;
+				while(re!=0){
+					var x;
+					x=re%10;
+					te = te*10+x;
+					re=Math.floor(re/10);
+				}
+				document.getElementById("outr").innerHTML=te;
+			}
+			function palindrome(){
+				var v;
+				var str=document.getElementById("pal").value;
+				var res="";
+				for ( var i=str.length-1;i>=0;i--){
+						res=res+str[i];
+				}
+				
+				if(str==res){
+					v="True";
+					document.getElementById("outp").innerHTML=v;
+				}
+				else{
+					v="False";
+					document.getElementById("outp").innerHTML=v;
+					}
+					
+			}
+			function inp(){
+				var str=document.getElementById("aei").value;
+				counti(str);
+				}
+			function counti(str){
+				str=str.toLowerCase();
+				var vo=['a','e','i','o','u'];
+				var count=0;
+				for( var i=0;i<str.length;i++){
+					if(vo.includes(str[i])){
+					count++;
+					}
+				}
+				document.getElementById("outv").innerHTML=count;
+			}
+			function perfect(){
+				var num=parseInt(document.getElementById("per").value);
+				var c;
+				c="False";
+				if(num<=1){
+					c="Fslse";
+				}
+					var sum=1;
+					for( var i=2;i<=Math.sqrt(num);i++){
+						if(num%i==0){
+						sum+=i;;
+						if(i!=num/i){
+						sum+=num/i;
+						}
+					}
+				}
+				if(sum==num){
+					c="True";
+				}
+				document.getElementById("outpl").innerHTML=c;
+				
+			}
+			function factors(){
+				var fs=parseInt(document.getElementById("fac").value);
+				var ar=[];
+				for(var i=1;i<=fs;i++){
+					if(fs%i==0){
+						ar.push(i);
+					}
+				}
+				document.getElementById("outf").innerHTML=ar;
+			}
+			function Count(){
+				var str=document.getElementById("ct").value;
+				var ch=document.getElementById("cha").value;
+				var count=0;
+				for(var i=0;i<str.length;i++){
+					if(str[i]==ch){
+						count++;
+					}
+				}
+				document.getElementById("outc").innerHTML=count;
+				
+			}
+		</script>
+		<input type="text" id="rev">
+		<button type="Button" onclick="reverse()">To Reverse a number</button>
+		<br><br>
+		<input type="text" id="pal">
+		<button type="Button" onclick="palindrome()">palindrome</button>
+		<br><br>
+		<input type="text" id="aei">
+		<button type="Button" onclick="inp()">Count Vowels</button>
+		<br><br>
+		<input type="text" id="per">
+		<button type="Button" onclick="perfect()">Perfect Number</button>
+		<br><br>
+		<input type="text" id="fac">
+		<button type="Button" onclick="factors()">Factors</button>
+		<br><br>
+		<input type="text" id="ct">
+		<input type="text" id="cha">
+		<button type="Button" onclick="Count()">Occurences Counter</button>
+		<br><br>
+		<h3>Output:</h3>
+		<p id="outr">Reversed Number</p>
+		<p id="outp">String Palindrome</p>
+		<p id="outv">Vowels count</p>
+		<p id="outpl">Perfect Number</p>
+		<p id="outf">Factors</p>
+		<p id="outc">Occurences Counter</p>
+	</body>
+</html>
