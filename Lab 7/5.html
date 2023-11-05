@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Write a JavaScript program to highlight the bold words of the following paragraph, on
+mouse over a certain link.</title>
+</head>
+<script>
+	function highlight(){
+		var bd=document.getElementsByTagName("b");
+		for (var i=0;i<bd.length;i++){
+			bd[i].style.color="red";
+			bd[i].style.backgroundColor="black";
+		}
+	}
+	function normal(){
+		var bd=document.getElementsByTagName("b");
+		console.log("Mouse out");
+		for (var i=0;i<bd.length;i++){
+			bd[i].style.color="black";
+			bd[i].style.backgroundColor="inherit";
+		}
+	}
+</script>
+<body>
+	<pre onMouseOver="highlight()",onmouseout="normal()"><b>We </b>have just <b>started </b>this section for the <b>users </b>(beginner to intermediate) <b>who want</b> to
+<b>work </b>with various JavaScript problems and <b>write</b> scripts online to <b>test</b> their JavaScript
+<b>skill.</b></pre>
+</body>
+</html>

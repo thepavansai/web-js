@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.Write a JavaScript program to count and display dropdown list items (same) in an alert.</title>
+</head>
+<body>
+    <select id="clr">
+        <option value="white">White</option>
+        <option value="red">Red</option>
+        <option value="lightblue">Light Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="royalblue">Royalblue</option>
+        <option value="orange">Orange</option>
+     </select>
+     <button onclick="showal()">Show Alret</button>
+     <script>
+        function showal(){
+            var sel=document.getElementById("clr");
+            var ct=sel.options.length;
+            var txt="Count:"+ct+"\n";
+            for(var i=0; i<ct;i++){
+                txt=txt+sel.options.item(i).text + "\n";
+            }
+            alert(txt);
+        }
+     </script>
+</body>
+</html>

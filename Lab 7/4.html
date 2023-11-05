@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculate Ideal Weight</title>
+    <style>
+        table{
+			border-collapse:collapse;
+			border:3px solid black;
+		}
+		td{
+			text-align:center;
+			padding:25px;
+		}
+    </style>
+</head>
+<script>
+	function cal(){
+		var h=parseInt(document.getElementById("he").value);
+		var x=0;
+		if(h<100){
+			alert("Enter Height Greater than 100 cm");
+		}
+		else{
+			x=h-100;
+			document.getElementById("ide").value=x;
+		}
+	}
+</script>
+<body >
+	<center>
+        <div>
+			<table >
+				<tr>
+					<td style="text-align:centre" colspan="2">
+						<h1>Ideal Weight Calculator</h1>
+					</td>
+				</tr>
+				<tr>
+					<td>Enter your height (in cms): </td>
+					<td><input type="text" id="he"></td>
+				</tr>
+				<tr>
+					<td>Your Ideal Weight :  </td>
+					<td><input type="text" id="ide"></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align:right;"><button style="height:50px;width:150px;"onclick="cal()">CLick here to check your ideal weight </button></td>
+				</tr>
+			</table>
+        </div>
+	</center>
+</body>
+
+</html>
