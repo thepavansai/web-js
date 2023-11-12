@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JavaScript function to obtain the First, Middle and   Last names' values from the registration form and show them in the alert window.</title>
+</head>
+<body>
+	<label>Enter your Name(Double space as Delimiter order LastName, First, Middle)</label><br><br>
+	<input type="text" id="nam">
+	
+	<br><br>
+	
+	<button onclick="sep()" value="alert">Seperate</button>
+	<script type="text/javascript">
+		function sep(){
+			let s=document.getElementById("nam").value;
+			if(s==""){
+				alert("Enter Name ");
+			}
+			li=s.split("  ");
+			alert("Last Name:"+li[0]+" \nFirst Name: "+li[1]+"\nMiddle Name: "+li[2]);
+		}
+	</script>
+</body>
+</html>
+

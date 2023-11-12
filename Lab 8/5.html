@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>5.Write a javascript application to highlight the prime numbers in a series</title>
+</head>
+<body>
+	<label>Enter Series</label>
+	<br><br>
+	<input type="text" id="in">
+	<button onclick="pri()">Prime Highlighter</button>
+	<script type="text/javascript">
+		function isp(num){
+			if(num<=1){
+				return 0;
+			}
+			for(let x=2;x<num;x++){
+				if(num%x==0){
+					return 0;
+				}
+			}
+			return 1;
+		}
+		function pri(){
+			var li=document.getElementById("in").value.split(" ");
+			var pa=document.createElement("p");
+			pa.style.fontSize="24px"
+			for(let x=0; x<li.length;x++){
+				const span=document.createElement("span");
+				span.innerText=li[x];
+				if(isp(parseInt(li[x]))){
+					span.style.color="Aliceblue";
+					span.style.backgroundColor="Black";
+				}
+				pa.appendChild(span);
+				if(x!=li.length-1){
+					pa.appendChild(document.createTextNode(" "));
+				}
+			}
+			document.body.append(pa);
+		}
+	</script>
+</body>
+</html>

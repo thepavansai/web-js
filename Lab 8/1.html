@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1. JavaScript method to add columns to a table when a user clicks the add column button.</title>
+	<style>
+		table{
+			border-collapse: collapse;
+			border-width:2px ;
+			border-style: solid;
+		}
+		th{
+			align-content: center;
+			width:150px;
+			height: 25px;
+		}
+		td{
+			text-align: center;
+		}
+	</style>
+</head>
+<body><center>
+	<label for="nam">Name : </label>
+	<input id="nam" type="text"><br><br>
+	<label for="reg">Reg no</label>
+	<input id="reg" type="text"><br><br>
+	<button onclick="add1()">Add</button>
+	<br><br>
+	<table id="table0" border="2">
+		<tr>
+			<th>Reg No </th>
+			<th>Name</th>
+		</tr>
+		<tr>
+			<td>125004371</td>
+			<td>G.Pavan Sai Sriram</td>
+		</tr>
+		<tr>
+			<td>125003463</td>
+			<td>Pavan Sai</td>
+		</tr>
+	</table>
+	</center>
+	<script>
+		function add1(){
+			var nia=document.getElementById("nam").value;
+			var reg=document.getElementById("reg").value;
+			if(nia===""||reg===""){
+				alert("Enter the Details ");
+				return;
+			}
+			var table=document.getElementById("table0");
+			var newrow= table.insertRow(table.rows.length);
+			var r0=newrow.insertCell(0);
+			var r1=newrow.insertCell(1);
+			r0.innerHTML = reg;
+			r1.innerHTML= nia;
+		}
+	</script>
+</body>
+</html>

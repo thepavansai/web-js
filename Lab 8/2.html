@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> 2.A JavaScript application to  add items to a drop-down list.</title>
+</head>
+<body>
+	<input type="text" id="ip">
+	<button onclick="addi()">Add</button>
+	<br><br>
+
+	<select id ="drop">
+		<option value="red">Red</option>
+		<option value="green">Green</option>
+		<option value="Pink">Pink</option>
+	</select>
+	<script defer>
+		function addi(){
+			var ip=document.getElementById("ip").value;
+			if(ip==""){
+				alert("Input Please ");
+				return ;
+			}
+			var li=document.getElementById("drop");
+			let opt=document.createElement("option");
+			opt.text=ip;
+			opt.value=ip;
+			li.add(opt);
+
+		}
+	</script>
+</body>
+</html>
