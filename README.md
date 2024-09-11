@@ -1,4 +1,4 @@
 # ScriptProgamming
-Web Desiging using HTML , CSS , JS.
-Rebranded to phantompavan
-https://thepavansai.github.io/ScriptProgamming/
+Web Desiging using HTML , CSS , JavsScript.
+
+https://thepavansai.github.io/web-js/
